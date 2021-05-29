@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper-1.14.7.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'photos/logo/searchlogo.jpg' %}">
+
+    <title>Blood Bank Management System</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- head title -->
+        <header>
+            <h5 class="head text-white text-center p-3">Blood Bank Management System</h5>
+        </header>
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-sm sticky-top">
+
+            <!-- logo -->
+            <a class="navbar-brand ml-5" href="#">
+                <img src="{% static 'photos/logo/searchlogo.jpg' %}" alt="logo" style="width:60px;">
+            </a>
+
+            <!-- navbar item -->
+            <div class="col">
+                <ul class="navbar-nav flex-row-reverse">
+                    <li class="nav-item text-dark">
+                        <a class="nav-link font-weight-bolder" href="{% url 'aboutsite1' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bolder" href="{% url 'contactsite1' %}">Contact Us</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link font-weight-bolder" href="#" data-toggle="dropdown">
+              Log In
+            </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item font-weight-bolder" href="/admin/">Admin</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bolder" href="{% url 'dregsite' %}">Donor Registration</a>
+                    </li>
+                    <li class="nav-item font-weight-bolder">
+                        <a class="nav-link" href="{% url 'searchsite1' %}">Search</a>
+                    </li>
+                    <li class="nav-item font-weight-bolder">
+                        <a class="nav-link" href="{% url 'homesite1' %}">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Carousel  -->
+        <div class="carousel_slid">
+            <div class="opacity_carousel"></div>
+            <div id="slide" class="carousel slide" data-ride="carousel">
+                <!-- carousel indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#slide" data-slide-to="0" class="active"></li>
+                    <li data-target="#slide" data-slide-to="1"></li>
+                    <li data-target="#slide" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item carousel-img-1 active">
+                         <img src="https://images.unsplash.com/photo-1615461065624-21b562ee5566?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1196&q=80" alt="Slid Image">
+                        <div class="carousel-caption">
+                            <h3>Why do we donate blood?</h3>
+                            <p>Donating just one pint of blood can save more than one person's life.</p>
+                        </div>
+                    </div>
+                    <!-- carousel item -->
+                    <div class="carousel-item carousel-img-2">
+                        <img src="https://images.unsplash.com/photo-1599727277757-3f54e54ea618?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="Slid Image">
+                        <div class="carousel-caption">
+                            <h3>Why do we donate blood?</h3>
+                            <p>Whenever you donate blood, you’re giving someone the opportunity to have a new lease on life, not to mention that you’re also giving your overall health a great boost.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-img-3">
+                        <img src="https://images.unsplash.com/photo-1583912372139-6a46eb6eb119?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80" alt="Slid Image">
+                        <div class="carousel-caption">
+                            <h3>Why do we donate blood?</h3>
+                            <p>It is not more painful than losing a loved one that you may save by donating!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carousel control -->
+                <a class="carousel-control-prev" href="#slide" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#slide" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+
+        {% block content %} 
+        
+        
+        {% endblock %}
+
+        <!-- footer -->
+        <div class="footer clearfix">
+            <p class="text-center text-white p-2">
+                DTU Blood Bank Management System
+                <br> By
+                <br> Shwetanshu Singh(2K19/CO/373)
+                <br> Shivank Gupta(2K19/CO/364)
+                <br>
+
+            </p>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
